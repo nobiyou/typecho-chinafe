@@ -40,8 +40,8 @@ function themeConfig($form)
     );
     $form->addInput($BGtype);
 
-    $bgcolor = new Typecho_Widget_Helper_Form_Element_Text('bgcolor', null, _t('/img/bg_header_02.jpg'), _t('背景颜色 / 图片'), _t('背景设置如果选择纯色背景, 这里就填写颜色代码; <br />背景设置如果选择图片背景, 这里就填写图片地址;<br />
-    不填写则默认显示 #F5F5F5 或主题文件夹下的 /img/bg.jpg'));
+    $bgcolor = new Typecho_Widget_Helper_Form_Element_Text('bgcolor', null, _t(''), _t('背景颜色 / 图片'), _t('背景设置如果选择纯色背景, 这里就填写颜色代码; <br />背景设置如果选择图片背景, 这里就填写图片地址;<br />
+    不填写则默认显示 #4ea2b4 或主题文件夹下的 /img/bg_header_02.jpg'));
     $form->addInput($bgcolor);
 
     $GradientType = new Typecho_Widget_Helper_Form_Element_Radio('GradientType',
@@ -177,7 +177,7 @@ function themeConfig($form)
     );
     $form->addInput($BGbanner);
 	
-	$parallaxbg = new Typecho_Widget_Helper_Form_Element_Text('parallaxbg', null, _t('/img/parallax_01.jpg'), _t('首页底部数字的图片地址'), _t('填入图片地址, 图片显示在首页底部数字位置'));
+	$parallaxbg = new Typecho_Widget_Helper_Form_Element_Text('parallaxbg', null, _t(''), _t('首页底部数字的图片地址'), _t('填入图片地址,默认显示主题文件夹下的/img/parallax_01.jpg, 图片显示在首页底部数字位置'));
     $form->addInput($parallaxbg);
 
 

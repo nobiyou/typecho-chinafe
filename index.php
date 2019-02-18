@@ -229,7 +229,13 @@ $this->need('header.php');?>
 						
 					</div>
 				</div>
-				<div class="parallax parallax_01 " data-type="background" data-speed="10" style="background-image: url(<?php $this->options->themeUrl(); ?><?php $this->options->parallaxbg() ?>);">
+				<div class="parallax parallax_01 " data-type="background" data-speed="10" style="
+				<?php if (!empty($this->options->parallaxbg)): ?>
+				background-image: url(<?php $this->options->parallaxbg() ?>);
+				<?php else: ?>
+				background-image: url(<?php $this->options->themeUrl('img/parallax_01.jpg'); ?>);
+				<?php endif; ?>
+				">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-12">
